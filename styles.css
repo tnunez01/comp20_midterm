@@ -47,7 +47,7 @@ nav{
     margin: 5px;
 }
 
-@media only screen and (max-width:1200px){
+@media screen and (max-width:1200px){
     .nav-links{
         width: 60%;
     }
