@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 300px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #fcb867;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    background-color: #82b3e0;
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fcb867;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 20px 50px 20px 50px;
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.sidenav a:hover, .side-drop-btn:hover{
+    background-color: #82b3e0;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #ffcb8b;
+    padding-left: 8px;
+}
+
+.fa-caret-down {
+    color: #ffffff;
+    float: right;
+    padding-right: 8px;
+}
+
+.sidenav .closebtn {
+    top: 0;
+    text-align: right;
+    font-size: 40px;
+}
+
+.sidenav .closebtn:hover {
+    background-color: #fcb867;
+    color: #82b3e0;
+}
+
+@media screen and (max-width:1200px) {
+    .nav-links{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:900px){
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 400px;
+        top: 100px;
+        background-color: #fcb867;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fcb867;
+}
+
+.dropdown-content a {
+    padding: 20px 20px 20px 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer {
+    background-color: #fcb867;
+}
