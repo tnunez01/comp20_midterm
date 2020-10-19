@@ -1,0 +1,25 @@
+.container {
+  background-color: rgb(224, 203, 178);
+  height: auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.menuWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.picture {
+  width: 280px;
+  height: 250px;
+  border-radius: 50px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+
+.food {
+  font-size: x-large;
+  font-style: italic;
+}
