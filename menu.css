@@ -1,25 +1,57 @@
 .container {
-  background-color: rgb(224, 203, 178);
+  background-color: rgb(238, 193, 138);
   height: auto;
   text-align: center;
   padding: 40px;
 }
 
-.menuWrapper {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+@media only screen and (min-width: 800px) {
+  .menuWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .picture {
-  width: 280px;
-  height: 250px;
+  width: 300px;
+  height: 275px;
   border-radius: 50px;
-  margin-top: 12px;
-  margin-bottom: 50px;
 }
 
 .food {
   font-size: x-large;
   font-style: italic;
+  max-width: 350px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.foodName {
+  font-size: xx-large;
+}
+
+.salad {
+  width: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .menuWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .food {
+    min-width: 700px;
+    padding: 10px;
+  }
+  .picture {
+    width: 400px;
+    height: 350px;
+    border-radius: 50px;
+  }
+  .salad {
+    width: 500px;
+  }
 }
