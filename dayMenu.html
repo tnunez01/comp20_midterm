@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Jumbo Express</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="menu.css" />
   </head>
 
@@ -13,53 +17,64 @@
         <div>
           <a href="#"><img class="logo" src="logo.png" /></a>
         </div>
-        <ul class="nav-links">
-          <li><a href="index.html"> Home </a></li>
-          <li><a href="#"> About Us </a></li>
-          <li><a href="#"> Contact </a></li>
-          <li><a href="#"> Menu </a></li>
-          <li><a href="#"> Order Now </a></li>
-          <li><a href="#"> Careers </a></li>
-        </ul>
+        <div class="nav-links">
+          <a href="index.html"> Home </a>
+          <a href="#"> About </a>
+          <a href="#"> Contact </a>
+          <div class="dropdown">
+            <a class="drop-area" href="dayMenu.html"> Menu </a>
+            <div class="dropdown-content">
+              <a href="dayMenu.html"> Daytime </a>
+              <a href="nightMenu.html"> Nighttime </a>
+            </div>
+          </div>
+          <a href="jumboOrder.html"> Order </a>
+          <a href="#"> Careers </a>
+        </div>
+        <div class="burger" id="lines" onclick="openNav()">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
       </nav>
     </header>
-    <div class="container">
-      
+    <div class="container" style="background-color: rgb(250, 220, 184)">
       <div class="menuWrapper">
         <div>
-          <img class="picture" src="daytimeLogo.png" alt="daytimeLogo">
+          <img class="picture" src="daytimeLogo.png" alt="daytimeLogo" />
+          <div class="opentime">
+            Open time: 10am - 4pm <br />
+            Monday-Friday
+          </div>
         </div>
         <div class="food">
-          <img class="picture" src="./img/toast.jpg" alt="daytimeLogo">
+          <img class="picture" src="./img/toast.jpg" alt="toast" />
           <div class="foodName">Tufts Toast</div>
-          <div> french toast, berries, bananas, maple syrup</div>
+          <div>french toast, berries, bananas, maple syrup</div>
         </div>
         <div class="food">
-          <img class="picture salad" src="./img/salad.jpg" alt="daytimeLogo">
+          <img class="picture salad" src="./img/salad.jpg" alt="salad" />
           <div class="foodName">SEC Salad</div>
           <div>fresh homemade salad</div>
         </div>
       </div>
-     
+
       <div class="menuWrapper">
         <div class="food">
-          <img class="picture" src="./img/fries.jpg" alt="daytimeLogo">
-          <div class="foodName">Fletcher Fries</div> 
-          <div>fires, a drink of your choice</div>
+          <img class="picture" src="./img/fries.jpg" alt="fries" />
+          <div class="foodName">Fletcher Fries</div>
+          <div>fries, a drink of your choice</div>
         </div>
         <div class="food">
-          <img class="picture" src="./img/smoothie.jpg" alt="daytimeLogo">
-          <div class="foodName">Somerville Smoothie</div> 
+          <img class="picture" src="./img/smoothie.jpg" alt="smoothie" />
+          <div class="foodName">Somerville Smoothie</div>
           <div>raspberry, strawberries, and banana smoothie</div>
         </div>
         <div class="food">
-          <img class="picture" src="./img/burger.jpg" alt="daytimeLogo">
+          <img class="picture" src="./img/burger.jpg" alt="burger" />
           <div class="foodName">Barnum Burger</div>
-          <div>burger, lettuce, tomato, pickles, onion, cheese 
-          </div> 
+          <div>burger, lettuce, tomato, pickles, onion, cheese</div>
         </div>
-        
       </div>
     </div>
     <footer></footer>

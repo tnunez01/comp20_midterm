@@ -1,5 +1,4 @@
 .container {
-  background-color: rgb(238, 193, 138);
   height: auto;
   text-align: center;
   padding: 40px;
@@ -14,7 +13,7 @@
 }
 
 .picture {
-  width: 300px;
+  width: 320px;
   height: 275px;
   border-radius: 50px;
 }
@@ -36,6 +35,11 @@
   width: 400px;
 }
 
+.opentime {
+  font-size: larger;
+  font-style: italic;
+}
+
 @media only screen and (max-width: 1000px) {
   .menuWrapper {
     display: flex;
@@ -53,5 +57,8 @@
   }
   .salad {
     width: 500px;
+  }
+  .opentime {
+    margin-bottom: 25px;
   }
 }
