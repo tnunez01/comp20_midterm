@@ -1,0 +1,42 @@
+<header>
+    <nav>
+        <div>
+            <a href="#"><img class="logo" src="logo.png"></a>
+        </div>
+        <div class="nav-links">
+            <a href="#"> Home </a>
+            <a href="#"> About </a>
+            <a href="#"> Contact </a>
+            <div class="dropdown">
+                <a class="drop-area" href="#"> Menu </a>
+                <div class="dropdown-content">
+                    <a href="menu.html"> Daytime </a>
+                    <a href="#"> Nighttime </a>
+                </div>
+            </div>
+                <a href="jumboOrder.html"> Order </a>
+                <a href="#"> Careers </a>
+        </div>
+        <div class="burger" id="lines" onclick="openNav()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" onclick="closeNav()"> Home </a>
+    <a href="#" onclick="closeNav()"> About </a>
+    <a href="#" onclick="closeNav()"> Contact </a>
+    <a class="side-drop-btn" href="#"> Menu 
+            <i class="fa fa-caret-down" id="caret"></i>
+    </a>
+    <div class="dropdown-container">
+        <a href="menu.html" onclick="closeNav()"> Daytime </a>
+        <a href="#" onclick="closeNav()"> Nighttime </a>
+    </div>
+    <a href="jumboOrder.html" onclick="closeNav()"> Order </a>
+    <a href="#" onclick="closeNav()"> Careers </a>  
+</div>
