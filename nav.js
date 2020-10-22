@@ -1,17 +1,17 @@
-$(document).ready(function(){
-    $(".burger").click(function(){
-        $("#mySidenav").show("slide");
-    });
+$(document).ready(function () {
+  $(".burger").click(function () {
+    $("#mySidenav").show("slide");
+  });
 
-    $(".closebtn").click(function(){
-        $("#mySidenav").hide("slide");
-    });
+  $(".closebtn").click(function () {
+    $("#mySidenav").hide("slide");
+  });
 
-    $(".close-nav").click(function(){
-        $("#mySidenav").hide();
-    });
+  $(".close-nav").click(function () {
+    $("#mySidenav").hide();
+  });
 
-    $(".side-drop-btn").click(function(){
-        $(".dropdown-container").toggle();
-    });
+  $(".side-drop-btn").click(function () {
+    $(".dropdown-container").toggle();
+  });
 });

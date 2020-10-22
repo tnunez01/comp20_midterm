@@ -9,35 +9,53 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="menu.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="nav.js"></script>
   </head>
 
   <body>
     <header>
       <nav>
         <div>
-          <a href="#"><img class="logo" src="logo.png" /></a>
+          <a href="index.html"><img class="logo" src="logo.png" /></a>
         </div>
         <div class="nav-links">
           <a href="index.html"> Home </a>
-          <a href="#"> About </a>
-          <a href="#"> Contact </a>
+          <a href="about.html"> About </a>
           <div class="dropdown">
-            <a class="drop-area" href="dayMenu.html"> Menu </a>
+            <a class="drop-area" href="#"> Menu </a>
             <div class="dropdown-content">
               <a href="dayMenu.html"> Daytime </a>
               <a href="nightMenu.html"> Nighttime </a>
             </div>
           </div>
           <a href="jumboOrder.html"> Order </a>
-          <a href="#"> Careers </a>
+          <a href="careers.html"> Careers </a>
         </div>
-        <div class="burger" id="lines" onclick="openNav()">
+        <div class="burger" id="lines">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
       </nav>
     </header>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a href="index.html" class="close-nav"> Home </a>
+      <a href="about.html" class="close-nav"> About </a>
+      <a class="side-drop-btn" href="#">
+        Menu
+        <i class="fa fa-caret-down"></i>
+      </a>
+      <div class="dropdown-container">
+        <a href="dayMenu.html" class="close-nav"> Daytime </a>
+        <a href="nightMenu.html" class="close-nav"> Nighttime </a>
+      </div>
+      <a href="jumboOrder.html" class="close-nav"> Order </a>
+      <a href="careers.html" onclick="close-nav"> Careers </a>
+    </div>
+
     <div class="container" style="background-color: rgb(250, 220, 184)">
       <div class="menuWrapper">
         <div>
@@ -48,37 +66,71 @@
           </div>
         </div>
         <div class="food">
-          <img class="picture" src="./img/toast.jpg" alt="toast" />
+          <img
+            class="picture"
+            src="./img/2toast.jpg"
+            alt="toast"
+            style="width: 250px"
+          />
           <div class="foodName">Tufts Toast</div>
-          <div>french toast, berries, bananas, maple syrup</div>
+          <div style="text-align: center">
+            Go ‘Bos! Energize for game day with our brioche french toast topped
+            with blueberries, bananas, and maple syrup with a fresh dusting of
+            powdered sugar.
+          </div>
         </div>
         <div class="food">
           <img class="picture salad" src="./img/salad.jpg" alt="salad" />
           <div class="foodName">SEC Salad</div>
-          <div>fresh homemade salad</div>
+          <div>
+            You can’t have enough brain food while working in the SEC. This
+            salad offers tons of healthy vegetables with a light yet flavorful
+            dressing.
+          </div>
         </div>
       </div>
 
       <div class="menuWrapper">
         <div class="food">
-          <img class="picture" src="./img/fries.jpg" alt="fries" />
-          <div class="foodName">Fletcher Fries</div>
-          <div>fries, a drink of your choice</div>
+          <img
+            class="picture"
+            src="./img/donuts.jpg"
+            alt="smoothie"
+            style="width: 280px"
+            ;
+          />
+          <div class="foodName">Dowling Donuts</div>
+          <div>
+            No need to wait for Donuts with the Deans to grab a fresh donut
+            while waiting for a meeting in Dowling. Try one of our classic
+            donuts today!
+          </div>
         </div>
         <div class="food">
           <img class="picture" src="./img/smoothie.jpg" alt="smoothie" />
           <div class="foodName">Somerville Smoothie</div>
-          <div>raspberry, strawberries, and banana smoothie</div>
+          <div>
+            This is a perfect refreshment on a hot day and a perfect way to
+            fantasize about better weather during the winter. The Somerville
+            Smoothie is made of berries and bananas.
+          </div>
         </div>
         <div class="food">
-          <img class="picture" src="./img/burger.jpg" alt="burger" />
-          <div class="foodName">Barnum Burger</div>
-          <div>burger, lettuce, tomato, pickles, onion, cheese</div>
+          <img
+            class="picture"
+            src="./img/2hoagie.jpg"
+            alt="fries"
+            style="width: 380px"
+          />
+          <div class="foodName">Harleston Hoagie</div>
+          <div>
+            Need a hearty lunch option before your downhill class? Grab a warm
+            sandwich with turkey, green peppers, tomato, and red onion. This
+            meal comes with a small side of fries and a couple of sauces.
+          </div>
         </div>
       </div>
     </div>
     <footer></footer>
-
-    <script src="nav.js"></script>
   </body>
 </html>

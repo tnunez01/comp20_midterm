@@ -14,12 +14,12 @@
 
 .picture {
   width: 320px;
-  height: 275px;
-  border-radius: 50px;
+  height: 280px;
+  border-radius: 5px;
 }
 
 .food {
-  font-size: x-large;
+  font-size: large;
   font-style: italic;
   max-width: 350px;
   margin-bottom: 50px;
@@ -29,6 +29,8 @@
 
 .foodName {
   font-size: xx-large;
+  font-style: normal;
+  margin-bottom: 5px;
 }
 
 .salad {
@@ -53,7 +55,7 @@
   .picture {
     width: 400px;
     height: 350px;
-    border-radius: 50px;
+    border-radius: 10px;
   }
   .salad {
     width: 500px;
