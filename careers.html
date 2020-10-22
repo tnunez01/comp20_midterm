@@ -2,79 +2,75 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Careers</title>
-<style type="text/css">
-	.container
-	{
-		width:80%;
-		margin:auto;
-		overflow:hidden;
-		background-color: #FFFFFF;
-	}
-	body
-	{
-		background-color: #FFF3D4;
-		font-family: arial; 
-	}
-	.content
-	{
-		padding: 0px 10px;
-	}
-	.button1 
-	{
-		height: 38px;
-		background: #82B3E0;
-		border: none;
-		padding-left: 20px;
-		padding-right: 20px;
-		color: #ffffff;
-		font-size: 15px;
-	}
-	#application h2{
-		float: center;
-	}
-	#application form{
-		float: left;
-		margin-top: 15px;
-		margin-bottom: 15px;
-	}
-	#application input[type="email"]{
-		padding: 4px;
-		height: 25px;
-		width: 250px;
-	}	
-	#application input[type="text"]{
-		padding: 4px;
-		height: 25px;
-		width: 250px;
-	}	
-	.button1{
-		float:none;
-	}
-	@media(max-width: 768px){
-		#application h2,
-		#application form{
-			float: none;
-			text-align: center;
-			width: 100%;
-		}
-		button{
-			display: block;
-			width: 100%;
-		}
-		form input{
-			width: 100%;
-			margin-bottom: 5px;
-		}
-</style>
+<title>Careers - Jumbo Express</title>
+<link rel="icon" href="jumbo.png" />
+<link rel="stylesheet" href="general.css" />
+<link rel="stylesheet" href="careers.css" />
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script lang="javascript">
+    $(document).ready(function() {
+        $("#apply").validate();
+    });
+</script>
+<script src="nav.js"></script>
 </head>
 
 <body>
+    <header>
+        <nav>
+          <div>
+            <a href="index.html"><img class="logo" src="logo.png" /></a>
+          </div>
+          <div class="nav-links">
+            <a href="index.html"> Home </a>
+            <a href="about.html"> About </a>
+            <div class="dropdown">
+              <a class="drop-area" href="#"> Menu </a>
+              <div class="dropdown-content">
+                <a href="dayMenu.html"> Daytime </a>
+                <a href="nightMenu.html"> Nighttime </a>
+              </div>
+            </div>
+            <a href="jumboOrder.html"> Order </a>
+            <a href="careers.html"> Careers </a>
+          </div>
+          <div class="burger" id="lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </header>
+  
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <a href="index.html" class="close-nav"> Home </a>
+        <a href="about.html" class="close-nav"> About </a>
+        <a class="side-drop-btn" href="#">
+          Menu
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-container">
+          <a href="dayMenu.html" class="close-nav"> Daytime </a>
+          <a href="nightMenu.html" class="close-nav"> Nighttime </a>
+        </div>
+        <a href="jumboOrder.html" class="close-nav"> Order </a>
+        <a href="careers.html" onclick="close-nav"> Careers </a>
+      </div>
+      
 	<div class="container">
 		<div class="content">
 		<h1>CAREERS</h1>
 		<h3>Do you want to join our team?</h3>
-		<p>We are currently hiring delivery people, chefs, and servers. We are looking for motivated, hardworking individuals.<br><br>Requirements: availability, flexibility, good attitude, customer service skills, teamwork, leadership, ability to follow directions.<br><br>Available positions: team management, chefs, and delivery people.<br><br>Fill out the information below for more information.  </p>
+		<p>We are currently hiring!
+            We are looking for motivated, hardworking individuals.<br><br>
+            <b>Requirements:</b> availability, flexibility, good attitude, customer service skills, teamwork, leadership, ability to follow directions<br><br>
+            <b>Available positions:</b> team management, chefs, and cashiers<br><br>Fill out the information below for more information.  </p>
 		</div>
 		
 		<hr>
@@ -83,18 +79,42 @@
 		<section id="application">
 		<h2 style="text-align: center">APPLY HERE</h2>
 		<p style="text-align:center">Thank you for your interest in joining us! Please fill out your name, email, and the position you are most interested in. We will reach out soon with more information and will send you an application.</p>
-		<form name="form1">
-			Name <br><input type="text">
-			<br><br>
-			Email Address <br><input type="email">
-			<br><br>
-			Position of Interest <br><input type="text">
-			<br><br>
-			<input type="button" value="Submit" class="button1">
+		<form id="apply" name="apply" method="post">
+            <p>
+                <label for="name">Name <span>(required)</span></label>
+                <input id="name" name="name" type="text" required>
+            </p>
+            <p>
+                <label for="email">E-Mail <span>(required)</span> </label>
+                <input id="email" name="email" type="email" required>
+            </p>
+            <p>
+                <label for="positions">Position of Interest </label>
+                <select id="positions" name="positions">
+                    <option value="manage">Team Manager</option>
+                    <option value="chef">Chef</option>
+                    <option value="deliver">Cashier</option>
+                </select>
+            </p>
+            <p>
+                <input class="submit" type="submit" value="SUBMIT">
+
+            </p>
 		</form>
 		</section>
 		</div>
 		<br><br>
-	</div>
+    </div>
+    <footer>
+        <div>
+          <h2 style="text-align: center;">Contact Us!<h2>
+        </div>
+        <div class="footer-links">
+          <a class=“contact-link” href=“mailto: jumboexpress@tufts.edu”>jumboexpress@tufts.edu</a>
+          <a class=“contact-link” href=“http://maps.google.com/?q=25 Latin Way Rd, Medford, MA 02155"
+              target=“_blank”>25 Latin Way Rd, Medford, MA 02155</a>
+          <a class=“contact-link” href=“tel: 781-609-3800”>781-609-3800</a>
+        </div>
+    </footer>
 </body>
 </html>
