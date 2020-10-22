@@ -9,20 +9,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="nav.js"></script>
   </head>
 
   <body>
     <header>
       <nav>
         <div>
-          <a href="#"><img class="logo" src="logo.png" /></a>
+          <a href="index.html"><img class="logo" src="logo.png" /></a>
         </div>
         <div class="nav-links">
-          <a href="#"> Home </a>
+          <a href="index.html"> Home </a>
           <a href="about.html"> About </a>
-          <a href="#"> Contact </a>
           <div class="dropdown">
-            <a class="drop-area" href="dayMenu.html"> Menu </a>
+            <a class="drop-area" href="#"> Menu </a>
             <div class="dropdown-content">
               <a href="dayMenu.html"> Daytime </a>
               <a href="nightMenu.html"> Nighttime </a>
@@ -31,7 +32,7 @@
           <a href="jumboOrder.html"> Order </a>
           <a href="careers.html"> Careers </a>
         </div>
-        <div class="burger" id="lines" onclick="openNav()">
+        <div class="burger" id="lines">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
@@ -40,30 +41,53 @@
     </header>
 
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
-      <a href="#" onclick="closeNav()"> Home </a>
-      <a href="about.html" onclick="closeNav()"> About </a>
-      <a href="#" onclick="closeNav()"> Contact </a>
-      <a class="side-drop-btn" href="menu.html">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a href="index.html" class="close-nav"> Home </a>
+      <a href="about.html" class="close-nav"> About </a>
+      <a class="side-drop-btn" href="#">
         Menu
         <i class="fa fa-caret-down"></i>
       </a>
       <div class="dropdown-container">
-        <a href="menu.html" onclick="closeNav()"> Daytime </a>
-        <a href="#" onclick="closeNav()"> Nighttime </a>
+        <a href="dayMenu.html" class="close-nav"> Daytime </a>
+        <a href="nightMenu.html" class="close-nav"> Nighttime </a>
       </div>
-      <a href="jumboOrder.html" onclick="closeNav()"> Order </a>
-      <a href="careers.html" onclick="closeNav()"> Careers </a>
+      <a href="jumboOrder.html" class="close-nav"> Order </a>
+      <a href="careers.html" onclick="close-nav"> Careers </a>
     </div>
 
     <div id="main">
+      <h1>Welcome to Jumbo Express!</h1>
       <img src="home.png" width="100%" />
     </div>
 
-    <footer></footer>
+    <footer>
+        <div class=“footer-links”>
+          <div class=“subtitle”>How to contact us?</div>
+          <ul>
+            <li>
+              <b>Email: &nbsp </b>
+              <a class=“contact-link” href=“mailto: jumboexpress@tufts.edu”
+                >jumboexpress@tufts.edu</a
+              >
+            </li>
+            <li>
+              <b>Phone: &nbsp </b
+              ><a class=“contact-link” href=“tel: 781-609-3800”>781-609-3800</a>
+            </li>
+            <li>
+              <b>Address: &nbsp </b
+              ><a
+                class=“contact-link”
+                href=“http://maps.google.com/?q=25 Latin Way Rd, Medford, MA 02155"
+                target=“_blank”
+                >25 Latin Way Rd, Medford, MA 02155</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
-    <script src="nav.js"></script>
   </body>
 </html>

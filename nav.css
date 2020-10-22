@@ -32,7 +32,7 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: #82b3e0;
+    color: #61a0db;
 }
 
 .burger {
@@ -49,14 +49,14 @@ nav {
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 250px;
+    display: none;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
     background-color: #fcb867;
     overflow-x: hidden;
-    transition: 0.5s;
 }
 
 .sidenav a {
@@ -135,7 +135,7 @@ nav {
 }
 
 .dropdown-content a {
-    padding: 20px 20px 20px 20px;
+    padding: 30px 30px 30px 30px;
 }
 
 .dropdown:hover .dropdown-content {
