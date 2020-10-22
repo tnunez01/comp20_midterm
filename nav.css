@@ -145,21 +145,27 @@ nav {
 }
 
 footer {
-    justify-content: center;
-    left: 0;
-    bottom: 0;
+    padding-top: 5px;
     width: 100%;
     background-color: #fcb867;
     display: flex;
+    color: #ffffff;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer-links {
+    display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-decoration: none;
+    flex-direction: column;
+    
 }
 
 footer a {
     color: #ffffff;
     text-decoration: none;
     font-size: 20px;
+    padding-bottom: 5px;
 }
