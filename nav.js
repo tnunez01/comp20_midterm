@@ -1,25 +1,17 @@
-window.onload = function()
-{
-    var dropdown = document.getElementsByClassName("side-drop-btn");
-    var i;
+$(document).ready(function(){
+    $(".burger").click(function(){
+        $("#mySidenav").show("slide");
+    });
 
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-}
+    $(".closebtn").click(function(){
+        $("#mySidenav").hide("slide");
+    });
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
+    $(".close-nav").click(function(){
+        $("#mySidenav").hide();
+    });
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+    $(".side-drop-btn").click(function(){
+        $(".dropdown-container").toggle();
+    });
+});
