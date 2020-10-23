@@ -10,12 +10,15 @@ body {
 
 h1 {
     text-transform: uppercase;
-    padding-top: 10px;
+    font-size: 40px;
+    padding-top: 20px;
     padding-bottom: 10px;
     color: #3f84c5;
+    letter-spacing: 1px;
 }
 
 h2 {
+    font-size: 32px;
     text-transform: uppercase;
     color: #61a0db;
 }

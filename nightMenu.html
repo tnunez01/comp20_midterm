@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Jumbo Express</title>
+    <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="nav.css" />
     <link
       rel="stylesheet"
@@ -16,23 +17,22 @@
     <header>
       <nav>
         <div>
-          <a href="#"><img class="logo" src="logo.png" /></a>
+          <a href="index.html"><img class="logo" src="logo.png" /></a>
         </div>
         <div class="nav-links">
           <a href="index.html"> Home </a>
-          <a href="#"> About </a>
-          <a href="#"> Contact </a>
+          <a href="about.html"> About </a>
           <div class="dropdown">
-            <a class="drop-area" href="dayMenu.html"> Menu </a>
+            <a class="drop-area" href="#"> Menu </a>
             <div class="dropdown-content">
               <a href="dayMenu.html"> Daytime </a>
               <a href="nightMenu.html"> Nighttime </a>
             </div>
           </div>
           <a href="jumboOrder.html"> Order </a>
-          <a href="#"> Careers </a>
+          <a href="careers.html"> Careers </a>
         </div>
-        <div class="burger" id="lines" onclick="openNav()">
+        <div class="burger" id="lines">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
@@ -40,17 +40,35 @@
       </nav>
     </header>
 
-    <div class="container" style="background-color: rgb(200, 200, 219)">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a href="index.html" class="close-nav"> Home </a>
+      <a href="about.html" class="close-nav"> About </a>
+      <a class="side-drop-btn" href="#">
+        Menu
+        <i class="fa fa-caret-down"></i>
+      </a>
+      <div class="dropdown-container">
+        <a href="dayMenu.html" class="close-nav"> Daytime </a>
+        <a href="nightMenu.html" class="close-nav"> Nighttime </a>
+      </div>
+      <a href="jumboOrder.html" class="close-nav"> Order </a>
+      <a href="careers.html" onclick="close-nav"> Careers </a>
+    </div>
+
+    <h1 style="text-align: center; color: #ffffff; background-color: #82b3e0;">Nighttime Options</h1>
+
+    <div class="container" style="background-color: #82b3e0;">
       <div class="menuWrapper">
         <div>
           <img class="picture" src="lateNightLogo.png" alt="lateNightLogo" />
           <div class="opentime">
-            Open time: 10pm - 2am <br />
-            Monday-Friday
+            Available from 10pm to 2am <br />
+            Sunnday-Saturday
           </div>
         </div>
         <div class="food">
-          <img class="picture" src="./img/nachos.jpg" alt="nachos" />
+          <img class="picture" src="./img/2nachos.jpg" alt="nachos" />
           <div class="foodName">Nighttime Nachos</div>
           <div>
             Satisfy your late night craving with our Nighttime Nachos! Includes
@@ -71,9 +89,9 @@
           <img class="picture" src="./img/burger.jpg" alt="burger" />
           <div class="foodName">Barnum Burger</div>
           <div>
-            This high-quality burger with fresh vegetables might be just what
-            you need to fuel your second wind for the night. The Barnum Burger
-            comes with a gourmet brioche bun and a secret sauce!
+            This might be just what you need to fuel your second wind.
+            The Barnum Burger comes with a gourmet brioche bun
+            and a secret sauce!
           </div>
         </div>
         <div class="food">
@@ -95,6 +113,16 @@
       </div>
     </div>
 
-    <footer></footer>
+    <footer>
+      <div>
+        <h2 style="text-align: center;">Contact Us!<h2>
+      </div>
+      <div class="footer-links">
+        <a class=“contact-link” href=“mailto: jumboexpress@tufts.edu”>jumboexpress@tufts.edu</a>
+        <a class=“contact-link” href=“http://maps.google.com/?q=25 Latin Way Rd, Medford, MA 02155"
+            target=“_blank”>25 Latin Way Rd, Medford, MA 02155</a>
+        <a class=“contact-link” href=“tel: 781-609-3800”>781-609-3800</a>
+      </div>
+    </footer>
   </body>
 </html>
