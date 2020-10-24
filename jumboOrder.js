@@ -29,12 +29,21 @@ function ready() {
 }
 
 function purchaseClicked() {
-  alert("Thank you for your purchase");
-  var cartItems = document.getElementsByClassName("cart-items")[0];
-  while (cartItems.hasChildNodes()) {
-    cartItems.removeChild(cartItems.firstChild);
+  //LOOK HERE THEO
+  var total_sign = document.getElementsByClassName("cart-total-price")[0]
+                  .innerText;
+  if (total_sign == "$0") {
+    alert("Add items to your cart in order to checkout.");
+  } else {
+    // alert("Thank you for your purchase");
+    // localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    var cartItems = document.getElementsByClassName("cart-items")[0];
+    while (cartItems.hasChildNodes()) {
+      cartItems.removeChild(cartItems.firstChild);
+    }
+    updateCartTotal();
+    window.open("checkout.html");
   }
-  updateCartTotal();
 }
 
 function removeCartItem(event) {
@@ -68,7 +77,7 @@ function addItemToCart(title, price, imageSrc) {
   var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
   for (var i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText == title) {
-      alert("This item is already added to the cart. You can adjust the quantity there.");
+      alert("This item is already added to the cart. You can adjust the quantity below.");
       return;
     }
   }

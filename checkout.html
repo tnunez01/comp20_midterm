@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout - Jumbo Express</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="jumbo.png" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="careers.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script lang="javascript">
+        $(document).ready(function() {
+            $("#apply").validate();
+        });
+    </script>
+    <script src="nav.js"></script>
+    <style>
+      .radio-btns {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+      #pick, #deliver {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="index.html"><img class="logo" src="logo.png" /></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html"> Home </a>
+          <a href="about.html"> About </a>
+          <div class="dropdown">
+            <a class="drop-area" href="#"> Menu </a>
+            <div class="dropdown-content">
+              <a href="dayMenu.html"> Daytime </a>
+              <a href="nightMenu.html"> Nighttime </a>
+            </div>
+          </div>
+          <a href="jumboOrder.html"> Order </a>
+          <a href="careers.html"> Careers </a>
+        </div>
+        <div class="burger" id="lines">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a href="index.html" class="close-nav"> Home </a>
+      <a href="about.html" class="close-nav"> About </a>
+      <a class="side-drop-btn" href="#">
+        Menu
+        <i class="fa fa-caret-down"></i>
+      </a>
+      <div class="dropdown-container">
+        <a href="dayMenu.html" class="close-nav"> Daytime </a>
+        <a href="nightMenu.html" class="close-nav"> Nighttime </a>
+      </div>
+      <a href="jumboOrder.html" class="close-nav"> Order </a>
+      <a href="careers.html" onclick="close-nav"> Careers </a>
+    </div>
+
+    <div class="container">
+      <div class="content">
+      <h1 style="text-align: center;">Checkout</h1>
+      
+      <section id="application">
+      <p style="text-align:center">Almost there! Fill out the information below to confirm your purchase.</p>
+      <form id="apply" name="apply" method="post">
+              <p>
+                  <label for="name">Name <span>(required)</span></label>
+                  <input id="name" name="name" type="text" required>
+              </p> <br>
+              <p>
+                  <label for="email">Phone Number <span>(required)</span> </label>
+                  <input id="number" name="number" minlength="10" type="tel" required>
+              </p> <br>
+              <div class="radio-btns">
+                  <label for="method">Pick-up or Delivery?</label>
+                  <input type="radio" name="choice" value="pickup" id="p">Pick-up
+                  <input type="radio" name="choice" value="delivery" id="d">Delivery
+              </div> <br>
+              <div id="pick">
+                  <label for="positions">Pick-up Location </label>
+                  <select id="positions" name="positions">
+                    <option value="ballou">Ballou </option>
+                    <option value="barnum">Barnum </option>
+                    <option value="carm">Carm </option>
+                    <option value="dowling">Dowling </option>
+                    <option value="harleston">Harleston </option>
+                    <option value="sec">SEC </option>
+                    <option value="west">West </option>
+                  </select>
+              </div>
+              <div id="deliver">
+                <p>
+                  <label for="address">Address <span>(required)</span></label>
+                  <input id="address" name="address" type="text" required>
+                </p> <br>
+                <p>
+                  <label for="email">Phone Number <span>(required)</span> </label>
+                  <input id="number" name="number" minlength="10" type="tel" required>
+                </p> <br>
+              </div> <br>
+              <p>
+                  <input class="submit" type="submit" value="CHECKOUT">
+  
+              </p>
+      </form>
+      </section>
+      </div>
+      <br><br>
+      </div>
+
+    <footer>
+        <div>
+          <h2 style="text-align: center;">Contact Us!<h2>
+        </div>
+        <div class="footer-links">
+          <a class=“contact-link” href=“mailto: jumboexpress@tufts.edu”>jumboexpress@tufts.edu</a>
+          <a class=“contact-link” href=“http://maps.google.com/?q=25 Latin Way Rd, Medford, MA 02155"
+              target=“_blank”>25 Latin Way Rd, Medford, MA 02155</a>
+          <a class=“contact-link” href=“tel: 781-609-3800”>781-609-3800</a>
+        </div>
+    </footer>
+
+    <script language="javascript">
+      $("#p").click(function () {
+        $("#deliver").hide();
+        $("#pick").show();
+      });
+      $("#d").click(function () {
+        $("#pick").hide();
+        $("#deliver").show();
+      });
+    </script>
+  </body>
+</html>

@@ -14,16 +14,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="nav.js"></script>
     <style>
-        .about-container {
+        .container {
           background-color: #ffffff;
           margin-left: auto;
           margin-right: auto;
           padding: 20px 20px 20px 20px;
           width: 70%;
+          display: flex;
+          align-items: flex-start;
         }
         #about-blurb {
             font-size: 22px;
-            display: flex;
+
+        }
+        .how-to {
+            font-size: 22px;
+            line-height: 2;
+        }
+
+        @media(max-width: 768px) {
+          .container {
+            flex-direction: column;
+          }
         }
     </style>
   </head>
@@ -71,21 +83,30 @@
       <a href="careers.html" onclick="close-nav"> Careers </a>
     </div>
 
-    <div class="about-container">
-      <h1>About Us</h1>
-      <div id="about-blurb">
-          We are a food service business located on the Tufts Campus. 
-          As undergrads, we hated how limited the food options were after 10pm. 
-          How can you be on a college campus and not have delicious food available at 2am? 
-          JumboExpress runs 24 hours, 7 days a week.
-          <img src="delivery.jpg" width="300px" style="margin-left: 20px;"/>
+    <div class="container">
+      <div class="left">
+        <h1>About Us</h1>
+        <div id="about-blurb" style="padding-top: 10px; line-height: 1.5;">
+            We are a food service business located on the Tufts Campus. 
+            As undergrads, we hated how limited the food options were after 9pm. 
+            How can you be on a college campus and not have access to delicious 
+            food available at 2am? 
+        </div>
+        <br><br>
+        <h2>How It Works</h2>
+        <h3 style="padding-top: 10px;">3 Simple Steps</h3>
+        <ol class="how-to" style="padding-top: 10px;">
+          <li>Locate the available menu based for the time of day.</li>
+          <li>Complete the order form.</li>
+          <li>Your order should be ready in 15-20 minutes!</li>
+        </ol>
       </div>
+      <img src="delivery.jpg" width="300px" style="margin-left: 20px;"/>
     </div>
 
-    <h2>How It Works</h2>
     <footer>
       <div>
-        <h2 style="text-align: center;">Contact Us!<h2>
+        <h2 style="float: left;">Contact Us!<h2>
       </div>
       <div class="footer-links">
         <a class=“contact-link” href=“mailto: jumboexpress@tufts.edu”>jumboexpress@tufts.edu</a>

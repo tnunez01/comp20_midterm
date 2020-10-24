@@ -28,7 +28,8 @@ nav {
     letter-spacing: 1px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, 
+.footer-links a:hover {
     color: #61a0db;
 }
 
