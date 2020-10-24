@@ -17,6 +17,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     $(document).ready(function() {
         $("#apply").validate();
     });
+    
 </script>
 <script src="nav.js"></script>
 </head>
@@ -118,5 +119,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
           <a class=“contact-link” href=“tel: 781-609-3800”>781-609-3800</a>
         </div>
     </footer>
+
+    <script language="javascript">
+      $(".submit").click(function () {
+        $("#name").val("");
+        $("#email").val("");
+      });
+    </script>
 </body>
 </html>

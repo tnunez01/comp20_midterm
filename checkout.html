@@ -86,7 +86,7 @@
                   <input id="name" name="name" type="text" required>
               </p> <br>
               <p>
-                  <label for="email">Phone Number <span>(required)</span> </label>
+                  <label for="number">Phone Number <span>(required)</span> </label>
                   <input id="number" name="number" minlength="10" type="tel" required>
               </p> <br>
               <div class="radio-btns">
@@ -112,12 +112,12 @@
                   <input id="address" name="address" type="text" required>
                 </p> <br>
                 <p>
-                  <label for="email">Phone Number <span>(required)</span> </label>
-                  <input id="number" name="number" minlength="10" type="tel" required>
+                  <label for="instruct">Special delivery instructions: </label>
+                  <input id="instruct" name="instruct" type="text">
                 </p> <br>
               </div> <br>
               <p>
-                  <input class="submit" type="submit" value="CHECKOUT">
+                  <input class="submit" type="button" value="CHECKOUT">
   
               </p>
       </form>
@@ -147,6 +147,12 @@
         $("#pick").hide();
         $("#deliver").show();
       });
+      $(".submit").click(function () {
+        $("#name").val("");
+        $("#number").val("");
+        $("#address").val("");
+        $("#instruct").val("");
+    });
     </script>
   </body>
 </html>
