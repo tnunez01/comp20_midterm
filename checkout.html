@@ -62,16 +62,14 @@
       margin-top: 15px;
       margin-bottom: 15px;
     }
-    #application input[type="email"],
-    #application input[type="text"] {
-      padding: 4px;
-      height: 25px;
-      width: 250px;
-    }
-    #position {
+    #place {
       margin-left: 10px;
       padding: 5px 5px 5px 5px;
       font-size: 14px;
+    }
+    .radio-btns {
+      display: flex;
+      justify-content: space-around;
     }
     @media(max-width: 768px) {
       .container {
@@ -82,6 +80,11 @@
         float: none;
         text-align: center;
         width: 100%;
+      }
+      .radio-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       button {
         display: block;
@@ -102,24 +105,34 @@
             $("#name").select();
             $("#name").focusin();
             return false;
-          }
-          else if (document.getElementById("number").value == "") {
+          } else if (document.getElementById("number").value == "") {
             alert("Please fill out ALL items of the form.");
             $("#number").select();
             $("#number").focusin();
             return false;
-          }
-          else if (document.getElementById("email").value.indexOf("@") == -1) {
-            alert("Please enter a valid email address.");
-            $("#email").select();
-            $("#email").focusin();
+          } else if ($('input[type=radio]:checked').length == 0) {
+            alert("Please fill out ALL items of the form.");
+            $(".radio-btns").select();
+            $(".radio-btns").focusin();
             return false;
-          }
-          else if ($("#position option:selected").text() == "Select a position.") {
-            alert("Please fill out all items of the form.");
-            $("#position").select();
-            $("#position").focusin();
-            return false;
+          } else {
+            if ($('#p').is(':checked') && $("#place option:selected").text() == "Select a pick-up location.") {
+                alert("Please select a pick-up location.");
+                return false;
+            } else if ($('#d').is(':checked') && document.getElementById("address").value == "") {
+                alert("Please provide your address.");
+                return false;
+            } else {
+              $("#name").val("");
+              $("#number").val("");
+              $("#address").val("");
+              $("#instruct").val("");
+              $("input[name='choice']").prop('checked',false);
+              $("#deliver").hide();
+              $("#pick").hide();
+              alert("Your order has been placed.")
+              return true;
+            }
           }
         }//close button1 click function
       );//close button1 click function
@@ -176,7 +189,7 @@
       <h1 style="text-align: center;">Checkout</h1>
 
       <section id="application">
-        <p style="text-align:center">Almost there! Fill out the information below to confirm your purchase.</p>
+        <p style="text-align:center">Almost there! Carefully fill out the information below to confirm your purchase.</p>
         <form id="apply" name="apply" method="post">
           <p>
             <label for="name">Name * </label>
@@ -191,9 +204,12 @@
             <input type="radio" name="choice" value="pickup" id="p">Pick-up
             <input type="radio" name="choice" value="delivery" id="d">Delivery
           </div> <br>
+          <hr>
+          <br>
           <div id="pick">
-            <label for="positions">Pick-up Location </label>
-            <select id="positions" name="positions">
+            <label for="place">Pick-up Location </label>
+            <select id="place" name="place">
+              <option value="choose">Select a pick-up location.</option>
               <option value="ballou">Ballou </option>
               <option value="barnum">Barnum </option>
               <option value="carm">Carm </option>
@@ -205,7 +221,7 @@
           </div>
           <div id="deliver">
             <p>
-              <label for="address">Address <span>(required)</span></label>
+              <label for="address">Address </label>
               <input id="address" name="address" type="text">
             </p> <br>
             <p>
@@ -243,12 +259,6 @@
     $("#d").click(function () {
       $("#pick").hide();
       $("#deliver").show();
-    });
-    $(".submit").click(function () {
-      $("#name").val("");
-      $("#number").val("");
-      $("#address").val("");
-      $("#instruct").val("");
     });
   </script>
 </body>

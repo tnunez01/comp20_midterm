@@ -124,6 +124,11 @@
 						$("#position").select();
 						$("#position").focusin();
 						return false;
+					} else {
+						alert("Your form has been submitted.");
+      					$("#name").val("");
+      					$("#email").val("");
+      					$("#position")[0].selectedIndex = 0;
 					}
 				}//close button1 click function
 			);//close button1 click function

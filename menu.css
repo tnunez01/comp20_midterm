@@ -32,6 +32,9 @@
   margin-bottom: 5px;
 }
 
+#hoagie {
+  width: 380px;
+}
 .salad {
   width: 400px;
 }
@@ -48,9 +51,11 @@
     align-items: center;
   }
   .food {
-    width: 80%%;
+    width: 90%;
   }
   .picture {
+    width: 100;
+    height: auto;
     border-radius: 10px;
   }
   .opentime {
