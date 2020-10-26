@@ -106,10 +106,6 @@ nav {
     .burger {
         display: block;
     }
-    .footer {
-        flex-direction: column;
-        justify-content: center;
-    }
 }
 
 .dropdown {
