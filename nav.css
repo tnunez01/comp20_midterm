@@ -114,6 +114,9 @@ nav {
         flex-direction: column;
         justify-content: center;
     }
+    .logo {
+        width: 100px;
+    }
 }
 
 .dropdown {
