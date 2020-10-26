@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-
+  
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>About - Jumbo Express</title>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="Tufts University, Jumbos, Jumbo express, COVID, Socially distant,Take-out, Food after 9pm">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
   <link rel="icon" href="jumbo.png" />
   <link rel="stylesheet" href="general.css" />
   <link rel="stylesheet" href="nav.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="nav.js"></script>
-  <style>
+
+  <style type="text/css">
     .container {
       background-color: #ffffff;
       margin-left: auto;
@@ -20,22 +23,26 @@
       padding: 20px 20px 20px 20px;
       width: 70%;
       display: flex;
-      align-items: flex-start;
+      flex-direction: column;
     }
-
+    .about {
+      display: flex;
+    }
     #about-blurb {
       font-size: 22px;
 
     }
-
     .how-to {
       font-size: 22px;
       line-height: 2;
     }
-
-    @media(max-width: 768px) {
-      .container {
+    @media(max-width: 1000px) {
+      .about {
         flex-direction: column;
+        align-items: center;
+      }
+      .deliver {
+        height: 50%;
       }
     }
   </style>
@@ -93,14 +100,19 @@
   </div>
 
   <div class="container">
-    <div class="left">
-      <h1>About Us</h1>
+    <div class="about">
       <div id="about-blurb" style="padding-top: 10px; line-height: 1.5;">
+        <h1>About Us</h1>
         We are a food service business located on the Tufts Campus.
         As undergrads, we hated how limited the food options were after 9pm.
         How can you be on a college campus and not have access to delicious
         food available at 2am?
-      </div>
+      </div><br><br>
+      
+      <img src="delivery.jpg" class="deliver" width="30%" style="margin-left: 20px;" />
+    </div>
+
+    <div class="how">
       <br><br>
       <h2>How It Works</h2>
       <h3 style="padding-top: 10px;">3 Simple Steps</h3>
@@ -115,7 +127,6 @@
         </div>
       </ol>
     </div>
-    <img src="delivery.jpg" width="300px" style="margin-left: 20px;" />
   </div>
 
   <footer>
@@ -123,10 +134,10 @@
       <h2 style="float: left;">Contact Us!<h2>
     </div>
     <div class="footer-links">
-      <a class=“contact-link” href=“mailto: jumboexpress@tufts.edu”>jumboexpress@tufts.edu</a>
-      <a class=“contact-link” href=“http://maps.google.com/?q=25 Latin Way Rd, Medford, MA 02155" target=“_blank”>25
-        Latin Way Rd, Medford, MA 02155</a>
-      <a class=“contact-link” href=“tel: 781-609-3800”>781-609-3800</a>
+      <a href="mailto: jumnboexpress@tufts.edu">jumboexpress@tufts.edu</a>
+      <a href="https://maps.google.com/?q=25 Latin Way Rd, Medford, MA"
+          target=“_blank”>25 Latin Way Rd, Medford, MA 02155</a>
+      <a href="tel: 781-609-3800">781-609-3800</a>
     </div>
   </footer>
 </body>

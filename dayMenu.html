@@ -1,149 +1,136 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Day time food,Take-out,Delivery">
-    <title>Day Menu - Jumbo Express</title>
-    <link rel="stylesheet" href="general.css" />
-    <link rel="stylesheet" href="nav.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="menu.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="nav.js"></script>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div>
-          <a href="index.html"><img class="logo" src="logo.png" /></a>
-        </div>
-        <div class="nav-links">
-          <a href="index.html"> Home </a>
-          <a href="about.html"> About </a>
-          <div class="dropdown">
-            <a class="drop-area" href="#"> Menu </a>
-            <div class="dropdown-content">
-              <a href="dayMenu.html"> Daytime </a>
-              <a href="nightMenu.html"> Nighttime </a>
-            </div>
-          </div>
-          <a href="jumboOrder.html"> Order </a>
-          <a href="careers.html"> Careers </a>
-        </div>
-        <div class="burger" id="lines">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <title>Day Menu - Jumbo Express</title>
+  <meta charset="UTF-8" />
+  <meta name="keywords"
+    content="Tufts University, Jumbos, Jumbo express, COVID, Socially distant,Take-out, Food after 9pm">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn">&times;</a>
-      <a href="index.html" class="close-nav"> Home </a>
-      <a href="about.html" class="close-nav"> About </a>
-      <a class="side-drop-btn" href="#">
-        Menu
-        <i class="fa fa-caret-down"></i>
-      </a>
-      <div class="dropdown-container">
-        <a href="dayMenu.html" class="close-nav"> Daytime </a>
-        <a href="nightMenu.html" class="close-nav"> Nighttime </a>
-      </div>
-      <a href="jumboOrder.html" class="close-nav"> Order </a>
-      <a href="careers.html" onclick="close-nav"> Careers </a>
-    </div>
+  <link rel="icon" href="jumbo.png" />
+  <link rel="stylesheet" href="general.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="menu.css" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="nav.js"></script>
+</head>
 
-    <h1 style="text-align: center;">Daytime Options</h1>
-
-    <div class="container">
-      <div class="menuWrapper">
-        <div>
-          <img class="picture" src="daytimeLogo.png" alt="daytimeLogo" />
-          <div class="opentime">
-            Available from 10am to 4pm <br />
-            Monday-Friday
-          </div>
-        </div>
-        <div class="food">
-          <img
-            class="picture"
-            src="./img/2toast.jpg"
-            alt="toast"
-            style="width: 250px"
-          />
-          <div class="foodName">Tufts Toast</div>
-          <div style="text-align: center">
-            Go ‘Bos! Energize for game day with our brioche french toast topped
-            with blueberries, bananas, maple syrup, and powdered sugar.
-          </div>
-        </div>
-        <div class="food">
-          <img class="picture salad" src="./img/salad.jpg" alt="salad" />
-          <div class="foodName">SEC Salad</div>
-          <div>
-            You can’t have enough brain food while working in the SEC. This
-            salad offers tons of healthy vegetables with a flavorful dressing.
-          </div>
-        </div>
-      </div>
-
-      <div class="menuWrapper">
-        <div class="food">
-          <img
-            class="picture"
-            src="./img/donuts.jpg"
-            alt="smoothie"
-            style="width: 280px"
-            ;
-          />
-          <div class="foodName">Dowling Donuts</div>
-          <div>
-            No need to wait for Donuts with the Deans to grab a fresh donut
-            while waiting for a meeting in Dowling. Try one of our classic
-            donuts today!
-          </div>
-        </div>
-        <div class="food">
-          <img class="picture" src="./img/smoothie.jpg" alt="smoothie" />
-          <div class="foodName">Somerville Smoothie</div>
-          <div>
-            The perfect drink on a hot day and a perfect way to
-            fantasize about warm weather during the winter. Made with fresh
-            berries and bananas.
-          </div>
-        </div>
-        <div class="food">
-          <img
-            class="picture"
-            src="./img/2hoagie.jpg"
-            alt="fries"
-            style="width: 380px"
-          />
-          <div class="foodName">Harleston Hoagie</div>
-          <div>
-            Need a hearty lunch option before your class downhill? This
-            sandwich has turkey and vegetables and comes with a side
-            of fries.
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer>
+<body>
+  <header>
+    <nav>
       <div>
-        <h2 style="text-align: center;">Contact Us!<h2>
+        <a href="index.html"><img class="logo" src="logo.png" /></a>
       </div>
-      <div class="footer-links">
-        <a class=“contact-link” href=“mailto: jumboexpress@tufts.edu”>jumboexpress@tufts.edu</a>
-        <a class=“contact-link” href=“http://maps.google.com/?q=25 Latin Way Rd, Medford, MA 02155"
-            target=“_blank”>25 Latin Way Rd, Medford, MA 02155</a>
-        <a class=“contact-link” href=“tel: 781-609-3800”>781-609-3800</a>
+      <div class="nav-links">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About </a>
+        <div class="dropdown">
+          <a class="drop-area" href="#"> Menu </a>
+          <div class="dropdown-content">
+            <a href="dayMenu.html"> Daytime </a>
+            <a href="nightMenu.html"> Nighttime </a>
+          </div>
+        </div>
+        <a href="jumboOrder.html"> Order </a>
+        <a href="careers.html"> Careers </a>
       </div>
-    </footer>
-  </body>
+      <div class="burger" id="lines">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+    <a href="index.html" class="close-nav"> Home </a>
+    <a href="about.html" class="close-nav"> About </a>
+    <a class="side-drop-btn" href="#">
+      Menu
+      <i class="fa fa-caret-down"></i>
+    </a>
+    <div class="dropdown-container">
+      <a href="dayMenu.html" class="close-nav"> Daytime </a>
+      <a href="nightMenu.html" class="close-nav"> Nighttime </a>
+    </div>
+    <a href="jumboOrder.html" class="close-nav"> Order </a>
+    <a href="careers.html" onclick="close-nav"> Careers </a>
+  </div>
+
+  <h1 style="text-align: center;">Daytime Options</h1>
+
+  <div class="container">
+    <div class="menuWrapper">
+      <div>
+        <img class="picture" src="daytimeLogo.png" alt="daytimeLogo" />
+        <div class="opentime">
+          Available from 10am to 4pm <br />
+          Monday-Friday
+        </div>
+      </div>
+      <div class="food">
+        <img class="picture" src="./img/2toast.jpg" alt="toast" style="width: 250px" />
+        <div class="foodName">Tufts Toast</div>
+        <div style="text-align: center">
+          Go ‘Bos! Energize for game day with our brioche french toast topped
+          with blueberries, bananas, maple syrup, and powdered sugar.
+        </div>
+      </div>
+      <div class="food">
+        <img class="picture salad" src="./img/salad.jpg" alt="salad" />
+        <div class="foodName">SEC Salad</div>
+        <div>
+          You can’t have enough brain food while working in the SEC. This
+          salad offers tons of healthy vegetables with a flavorful dressing.
+        </div>
+      </div>
+    </div>
+
+    <div class="menuWrapper">
+      <div class="food">
+        <img class="picture" src="./img/donuts.jpg" alt="smoothie" style="width: 280px" ; />
+        <div class="foodName">Dowling Donuts</div>
+        <div>
+          No need to wait for Donuts with the Deans to grab a fresh donut
+          while waiting for a meeting in Dowling. Try one of our classic
+          donuts today!
+        </div>
+      </div>
+      <div class="food">
+        <img class="picture" src="./img/smoothie.jpg" alt="smoothie" />
+        <div class="foodName">Somerville Smoothie</div>
+        <div>
+          The perfect drink on a hot day and a perfect way to
+          fantasize about warm weather during the winter. Made with fresh
+          berries and bananas.
+        </div>
+      </div>
+      <div class="food">
+        <img class="picture" src="./img/2hoagie.jpg" alt="fries" style="width: 380px" />
+        <div class="foodName">Harleston Hoagie</div>
+        <div>
+          Need a hearty lunch option before your class downhill? This
+          sandwich has turkey and vegetables and comes with a side
+          of fries.
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <h2 style="text-align: center;">Contact Us!<h2>
+    </div>
+    <div class="footer-links">
+      <a href="mailto: jumnboexpress@tufts.edu">jumboexpress@tufts.edu</a>
+      <a href="https://maps.google.com/?q=25 Latin Way Rd, Medford, MA" target=“_blank”>25 Latin Way Rd, Medford, MA
+        02155</a>
+      <a href="tel: 781-609-3800">781-609-3800</a>
+    </div>
+  </footer>
+</body>
+
 </html>
